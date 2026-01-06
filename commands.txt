@@ -1,0 +1,13 @@
+1.mkdir:make directory.
+makes new directory or create a new folder
+2.ls:list.
+use to show file and folder in current directory
+3.touch:use to create a new empty file.
+4.cp:copy.
+copies the data of one file to another file.
+5.cat:concatenate
+used to display the content of a file , create a file and combine mutiple files.
+6.cd:change directory
+use to move from one directory(folder)to another.
+7.pwd:print working directory.
+shows the current directory path you are in.
