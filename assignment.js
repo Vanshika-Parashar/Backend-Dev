@@ -81,35 +81,54 @@
 // "Please Subscribe".
 
 
-function getUser(username) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve({ name: "Rahul", type: "Premium" });
-    }, 1500);
-  });
+// function getUser(username) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve({ name: "Rahul", type: "Premium" });
+//     }, 1500);
+//   });
+// }
+
+// function checkSubscription(user) {
+//   return new Promise((resolve, reject) => {
+//     if (user.type === "Premium") {
+//       resolve("Access Granted ");
+//     } else {
+//       reject("Please Subscribe");
+//     }
+//   });
+// }
+
+// // Async/Await Implementation
+// async function login() {
+//   try {
+//     const user = await getUser(username);
+//     const result = await checkSubscription(user);
+//     console.log(result);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
+// login();
+var x = 10;
+if (true) {
+  var x = 20;
+  console.log(x);
 }
+console.log(x);
 
-function checkSubscription(user) {
-  return new Promise((resolve, reject) => {
-    if (user.type === "Premium") {
-      resolve("Access Granted ");
-    } else {
-      reject("Please Subscribe");
-    }
-  });
+let y = 10;
+if (true) {
+  let y = 20;
+  console.log(y);
 }
-
-// Async/Await Implementation
-async function login(username) {
-  try {
-    const user = await getUser(username);
-    const result = await checkSubscription(user);
-    console.log(result);
-  } catch (error) {
-    console.error(error);
-  }
-}
+console.log(y);
 
 
 
-//question 3:
+
+
+
+
+
+

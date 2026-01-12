@@ -1,0 +1,76 @@
+//DAY3:
+
+//tell outputs of followin code 
+q1.
+const obj = { a: "one", b: "two", a: "three" };
+console.log(obj);
+output is-> a:'three',b:'two'.
+
+q2.
+const a = {};
+const b = { key: "b" };
+const c = { key: "c" };
+
+a[b] = 123;
+a[c] = 456;
+
+console.log(a[b]);
+output-> 456 kyuki a[b]and a[c] bjects h but dono he definenhi h toh phle am 123 jaega then jb 456 jaega toh vo overrite ho jaega.
+
+q3.
+const user = { name: "Lydia", age: 21 };
+const admin = { admin: true, ...user };
+console.log(admin);
+output->{ admin: true, name: 'Lydia', age: 21 }
+isme spread operator use hua h means user ka data copy kr dea h admin m and admin agr user m bhi hota toh uska data overwrite ho jata .
+
+q4.
+const shape = {
+  radius: 10,
+  diameter() {
+    return this.radius * 2;
+  },
+  perimeter: () => 2 * Math.PI * this.radius,
+};
+
+console.log(shape.diameter());
+console.log(shape.perimeter());
+output->20
+       NaN
+shape.diameter() is normal function toh normal output aa gya.but shape.perimeter() ek arrow function iska apna this nhi hota eslye this .radius undefined h.
+
+q5.
+function test() {
+    console.log(a);
+    console.log(b);
+   
+    var a = 10;
+    let b = 20;
+}
+test();
+output-> undefined  
+declare baad m kiya h and print phle kr rhe h eslye undefined.
+
+q6.
+var x = 10;
+if (true) {
+  var x = 20;
+  console.log(x);
+}
+console.log(x);
+
+let y = 10;
+if (true) {
+  let y = 20;
+  console.log(y);
+}
+console.log(y);
+
+output->20
+        20
+        20
+        10
+let bock scope hota h toh globally change nhi krega sirf function k andar locally kr deta h 
+
+
+
