@@ -18,7 +18,7 @@ Uptime information: ${uptime} minutes
 
 `;
 
-    fs.writeFile("task3_output.log", logData, (err) => {
+    fs.appendFile("task3_output.log", logData, (err) => {
         if (err) {
             console.error("Error writing to file", err);
         }
