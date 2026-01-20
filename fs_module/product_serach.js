@@ -17,3 +17,27 @@ const server = http.createServer((req, res) => {
         const productDiscount = Number(discount);
         const discountAmount = (productPrice * productDiscount) / 100;
         const finalPrice = productPrice - discountAmount;
+        const logData = `Product: ${name}, Price: ${productPrice}, Discount: ${productDiscount}%, Final Price: ${finalPrice}\n`;
+
+        fs.appendFile("searches.txt", logData, (err) => {
+            if (err) {
+                console.log("File error", err);
+            }
+        });
+        res.writeHead(200, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({
+            product: name,
+            originalPrice: productPrice,
+            discount: productDiscount + "%",
+            finalPrice: finalPrice
+        }));
+
+    } else {
+        res.writeHead(404, { "Content-Type": "text/plain" });
+        res.end("Page not found");
+    }
+});
+
+server.listen(8000, () => {
+    console.log("Server running at http://localhost:8000");
+});
