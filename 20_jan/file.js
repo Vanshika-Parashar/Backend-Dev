@@ -14,14 +14,14 @@ fs.copyFile("text.txt","textAsynccopy.txt",(err)=>{
 fs.copyFileSync("text.txt","textcopy.txt")
 console.log("File copied successfully using sync function");
 //to unlink(delete asynchronous)
-// fs.unlink("textAsynccopy.txt",(err)=>{
-//     if(err){
-//         console.log("error while file is deleted",err);
+fs.unlink("textAsynccopy.txt",(err)=>{
+    if(err){
+        console.log("error while file is deleted",err);
 
-//     }
-//     else{
-//         console.log("file is deleted successfully");
-//     }
-// })
-// fs.unlinkSync("textcopy.txt");
-// console.log("file deleted successfully using sync function");
+    }
+    else{
+        console.log("file is deleted successfully");
+    }
+})
+fs.unlinkSync("textcopy.txt");
+console.log("file deleted successfully using sync function");
