@@ -31,7 +31,7 @@ fs.rmdir("newdirectory",(err)=>{
     }
     console.log("Directory is removed");
 })
-//for removing f=directory jise koi aur file ya folder ho
+//for removing directory jisme koi aur file ya folder ho ya empty bhi ho dono ko remove krti h 
 fs.rm("newdirectory",{recursive:true,force:true},(err)=>{
     if(err){
         console.log(err);
