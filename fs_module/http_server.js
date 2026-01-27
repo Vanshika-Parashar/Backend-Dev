@@ -53,8 +53,8 @@
 //         case "/contact":
 //             const user = {
 //                 id: 1,
-//                 name: "Satvik",
-//                 contact: "7080809670"
+//                 name: "vanshika",
+//                 contact: "1234567890"
 //             };
 
 //             res.writeHead(200, { "Content-Type": "text/html" });
