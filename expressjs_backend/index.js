@@ -16,10 +16,10 @@ app.get("/", (req, res) => {
 });
 
 app.get("/students/:id", (req, res) => {
-    const id = req.params.id;
+    const id = Number(req.params.id);
 
     const student = students.find(
-        (student) => student.id == id
+        (student) => student.id === id
     );
     if (!student) {
         return res.status(404).json({ message: "Student not found" });
