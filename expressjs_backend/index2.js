@@ -1,5 +1,5 @@
 import express from "express";
-
+import fs from "fs";
 const app = express();
 const PORT = 8000;
 
@@ -45,40 +45,57 @@ app.get("/students/:id", (req, res) => {
     res.json(student);
 });
 
-app.post("/students/register", (req, res) => {
-    const { id, name, branch } = req.body;
+// app.post("/students/register", (req, res) => {
+//     const { id, name, branch } = req.body;
 
-    console.log("<<<", req.body);
+//     console.log("<<<", req.body);
 
-    if (!id || !name || !branch) {
-        return res.status(400).json({
-            message: "All fields (id, name, branch) are required"
-        });
-    }
+//     if (!id || !name || !branch) {
+//         return res.status(400).json({
+//             message: "All fields (id, name, branch) are required"
+//         });
+//     }
 
-    const exists = students.find(
-        (student) => student.id === id
-    );
+//     const exists = students.find(
+//         (student) => student.id === id
+//     );
 
-    if (exists) {
-        return res.status(409).json({
-            message: "Student with this ID already exists"
-        });
-    }
+//     if (exists) {
+//         return res.status(409).json({
+//             message: "Student with this ID already exists"
+//         });
+//     }
 
-    const newStudent = {
-        id,
-        name,
-        branch
-    };
+//     const newStudent = {
+//         id,
+//         name,
+//         branch
+//     };
 
-    students.push(newStudent);
+//     students.push(newStudent);
+//         const studentString = JSON.stringify(newStudent, null, 2);
 
-    res.status(201).json({
-        message: "Student registered successfully",
-        student: newStudent
-    });
-});
+    
+//     fs.appendFile(
+//         "students.txt",
+//         studentString + "\n",
+//         (err) => {
+//             if (err) {
+//                 return res.status(500).json({
+//                     message: "Error saving student to file"
+//                 });
+//             }
+
+//             res.status(201).json({
+//                 message: "Student registered & saved to file",
+//                 student: newStudent
+//             });
+//         }
+    
+
+// );
+// });
+//ab hme data sath ki sath file m add krna h 
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
