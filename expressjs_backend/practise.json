@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Akshansh",
+    "branch": "cse"
+  },
+  {
+    "id": 2,
+    "name": "vanshika",
+    "branch": "CSE"
+  },
+  {
+    "id": 3,
+    "name": "sneha",
+    "branch": "diploma"
+  },
+  {
+    "id": 5,
+    "name": "astt",
+    "branch": "mech"
+  }
+]
